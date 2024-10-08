@@ -7,7 +7,6 @@ on:
 env:
   JAVA_DISTRIBUTION: 'temurin'
   JAVA_VERSION: '21'
-  JAVA_HOME: '/opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.4-7/x64'
   LIQUIBASE_VERSION: '4.29.2'
 jobs:
   install:
