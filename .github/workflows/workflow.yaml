@@ -16,13 +16,19 @@ jobs:
           url: ${{ secrets.POSTGRES_URL }}
           password: ${{ secrets.POSTGRES_PASSWORD }}
           username: ${{ secrets.POSTGRES_USERNAME }}
+      - uses: liquibase-github-actions/validate@v4.29.2
+        with:
+          changelogFile: example-changelog.sql
+          url: ${{ secrets.POSTGRES_URL }}
+          password: ${{ secrets.POSTGRES_PASSWORD }}
+          username: ${{ secrets.POSTGRES_USERNAME }}
       - uses: liquibase-github-actions/update-sql@v4.29.2
         with:
           changelogFile: example-changelog.sql
           url: ${{ secrets.POSTGRES_URL }}
           password: ${{ secrets.POSTGRES_PASSWORD }}
           username: ${{ secrets.POSTGRES_USERNAME }}
-      - uses: liquibase-github-actions/validate@v4.29.2
+      - uses: liquibase-github-actions/update@v4.29.2
         with:
           changelogFile: example-changelog.sql
           url: ${{ secrets.POSTGRES_URL }}
