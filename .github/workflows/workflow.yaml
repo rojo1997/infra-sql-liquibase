@@ -29,3 +29,9 @@ jobs:
       - name: Install Maven Dependencies
         run: mvn clean install
         working-directory: ./infra-sql-liquibase
+      - uses: liquibase-github-actions/status@v4.29.2
+        with:
+          changelogFile: example-changelog.sql
+          url: ${{ secrets.POSTGRES_URL }}
+          password: ${{ secrets.POSTGRES_PASSWORD }}
+          username: ${{ secrets.POSTGRES_USERNAME }}
