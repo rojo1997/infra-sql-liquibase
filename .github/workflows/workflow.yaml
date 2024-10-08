@@ -6,7 +6,7 @@ on:
     branches: [main]
 env:
   JAVA_DISTRIBUTION: 'temurin'
-  JAVA_VERSION: '21'
+  JAVA_VERSION: '17'
   LIQUIBASE_VERSION: '4.29.2'
 jobs:
   install:
